@@ -1,0 +1,481 @@
+/* COLORES BASE */
+:root {
+    --color-primary-dark: #005928; /* Verde Oscuro Institucional */
+    --color-accent-light: #aed581; /* Verde Claro de Acento */
+    --color-text-dark: #333;
+    --color-text-light: #555;
+    --color-white: #ffffff;
+    --color-footer-dark: #333333; 
+    --color-footer-copyright: #222222; 
+    --max-content-width: 1200px;
+}
+
+/* ESTILOS CSS GENERALES */
+body {
+    font-family: 'Georgia', serif;
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-primary-dark); 
+    min-height: unset; 
+}
+
+/* SOLUCIÓN DE EMERGENCIA PARA IMÁGENES */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- 1. BARRA SUPERIOR (TOP-BAR) --- */
+.top-bar-wrapper {
+    background-color: var(--color-primary-dark); 
+    width: 100%;
+}
+
+.top-bar-content {
+    max-width: var(--max-content-width); 
+    margin: 0 auto; 
+    padding: 8px 40px; 
+    font-size: 0.9em;
+    color: var(--color-white); 
+    display: flex; 
+    justify-content: flex-end; 
+    gap: 20px;
+}
+
+/* --- 2. ENCABEZADO PRINCIPAL (FOTO + INFO + LOGO) --- */
+.header-main-wrapper {
+    background-color: var(--color-white);
+}
+
+.header-info-content {
+    max-width: var(--max-content-width); 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 30px 40px; 
+}
+
+.profile-header {
+    display: flex; 
+    align-items: center;
+}
+
+.profile-pic-large {
+    width: 180px; 
+    height: 180px;
+    border-radius: 50%;
+    margin-right: 25px;
+    border: 3px solid #eee; 
+    object-fit: cover; 
+    flex-shrink: 0; 
+}
+
+.text-info h2 {
+    color: var(--color-text-dark); 
+    margin: 0 0 5px 0;
+    font-size: 1.2em; 
+    font-weight: normal;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.text-info p {
+    margin: 0;
+    font-size: 1em;
+    color: var(--color-text-light);
+}
+
+.university-logo .uni-logo {
+    max-width: 180px; 
+    height: auto;
+    align-self: center; 
+}
+
+.header-separator {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: 0;
+}
+
+/* --- 3. SECCIÓN DEL NOMBRE (DRA. KARINA VEGA GARCÍA) --- */
+.name-section-title {
+    background-color: var(--color-white); 
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 0; 
+}
+
+.name-content-wrapper {
+    max-width: var(--max-content-width); 
+    margin: 0 auto;
+    padding: 10px 40px; 
+}
+
+.name-section-title h1 {
+    font-size: 1.8em;
+    font-weight: normal;
+    color: var(--color-text-dark);
+    margin: 0;
+    padding: 0;
+    border-bottom: none; 
+}
+
+/* --- 4. NAVEGACIÓN PRINCIPAL (MENÚ) --- */
+.main-nav-lines {
+    background-color: var(--color-white); 
+    border-bottom: 1px solid #ccc; 
+}
+
+.nav-content {
+    max-width: var(--max-content-width); 
+    margin: 0 auto;
+    padding: 0 40px 10px 40px; 
+}
+
+.main-nav-lines ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-start; 
+    gap: 30px; 
+}
+
+.main-nav-lines ul li a {
+    display: block;
+    padding: 10px 0;
+    text-decoration: none;
+    color: var(--color-text-light); 
+    font-weight: normal; 
+    font-size: 1.1em;
+    
+    border-bottom: 3px solid transparent; 
+    transition: border-bottom 0.3s, color 0.3s;
+}
+
+.main-nav-lines ul li a:hover, .main-nav-lines ul li a.active {
+    color: var(--color-primary-dark); 
+    border-bottom: 3px solid var(--color-accent-light); 
+}
+
+/* --- 5. CONTENEDOR PRINCIPAL Y CONTENIDO --- */
+.container-full-width {
+    display: block; 
+    margin: 0 auto; 
+    max-width: var(--max-content-width); 
+    background-color: var(--color-white); 
+    padding: 0 40px; 
+    min-height: 50vh; 
+    margin-top: 0; 
+}
+
+.main-content {
+    padding: 0; 
+}
+
+.section-title {
+    color: var(--color-primary-dark); 
+    border-bottom: 2px solid var(--color-primary-dark); 
+    padding-bottom: 5px;
+    margin-top: 30px; 
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--color-primary-dark); 
+    margin: 30px 0;
+}
+
+/* ========================================= */
+/* === ESTILOS ESPECÍFICOS DE SECCIONES === */
+/* ========================================= */
+
+/* --- BIOGRAFÍA Y CV --- */
+.bio-cv-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.bio-column {
+    flex-basis: 70%;
+}
+
+.cv-column {
+    flex-basis: 30%;
+    text-align: left;
+    padding-left: 20px; 
+    border-left: 1px solid #eee; 
+}
+
+.cv-column .cv-title {
+    font-size: 1.2em; 
+    color: var(--color-primary-dark); 
+    margin-top: 0;
+    margin-bottom: 10px;
+    border-bottom: none; 
+    padding-bottom: 0;
+}
+
+.cv-download-link {
+    display: block; 
+    padding: 8px 0; 
+    color: var(--color-text-dark); 
+    text-decoration: none; 
+    font-size: 1em;
+    border: 1px solid transparent; 
+    transition: all 0.2s ease-in-out;
+}
+
+.cv-download-link:hover {
+    color: var(--color-primary-dark);
+    text-decoration: underline; 
+}
+
+/* --- ÁREAS DE INTERÉS (DOS COLUMNAS) --- */
+.two-column-list ul {
+    list-style-type: disc; 
+    padding-left: 20px; 
+    margin: 0;
+    
+    /* PROPIEDAD CLAVE: Divide la lista en 2 columnas */
+    column-count: 2;
+    column-gap: 40px; 
+    
+    -webkit-column-count: 2;
+    -webkit-column-gap: 40px;
+    -moz-column-count: 2;
+    -moz-column-gap: 40px;
+}
+
+.two-column-list li {
+    break-inside: avoid;
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 10px;
+}
+
+
+/* --- FOOTER STYLES --- */
+footer {
+    background-color: var(--color-footer-dark);
+    color: var(--color-white);
+    font-size: 0.9em;
+    padding-top: 20px;
+}
+
+.footer-widgets-wrapper {
+    padding: 20px 0;
+    border-bottom: 1px solid #444;
+}
+
+.footer-content-columns {
+    display: flex;
+    justify-content: space-between;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.footer-column {
+    width: 30%; 
+    padding: 10px;
+}
+
+.footer-column h3 {
+    color: var(--color-white);
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #444; 
+    padding-bottom: 5px;
+}
+
+.footer-column p {
+    margin: 5px 0;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.footer-copyright {
+    background-color: var(--color-footer-copyright);
+    padding: 15px 0;
+}
+
+.footer-copyright p {
+    margin: 0;
+    font-size: 0.8em;
+    color: #aaa;
+    font-style: italic; /* Cursiva para el copyright */
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--max-content-width);
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.back-to-top {
+    color: #fff;
+    text-decoration: none;
+    background-color: #555; 
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.back-to-top:hover {
+    background-color: var(--color-primary-dark);
+}
+
+
+/* ========================================= */
+/* === MEDIA QUERIES (RESPONSIVE) === */
+/* ========================================= */
+
+@media (max-width: 768px) {
+    /* AJUSTES GENERALES DEL CONTENIDO */
+    .top-bar-content,
+    .header-info-content,
+    .nav-content,
+    .name-content-wrapper,
+    .container-full-width,
+    .footer-content-columns {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* 1. BARRA SUPERIOR */
+    .top-bar-content {
+        background-color: var(--color-primary-dark);
+        color: var(--color-white);
+        flex-direction: column; 
+        align-items: flex-start; 
+        gap: 5px;
+        font-size: 1em; 
+    }
+
+    /* 2. ENCABEZADO (Foto, Info, Logo) */
+    .header-info-content {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    .profile-header {
+        flex-direction: row; 
+        align-items: center;
+        width: 100%;
+        justify-content: flex-start; 
+    }
+    
+    .profile-pic-large {
+        width: 100px; 
+        height: 100px;
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    
+    .text-info {
+        text-align: left;
+    }
+
+    .text-info p {
+        font-size: 0.9em;
+    }
+    
+    .university-logo {
+        width: auto;
+        text-align: center;
+        padding-top: 20px;
+        margin-top: 20px;
+        border-top: 1px solid #eee; 
+        align-self: center; 
+    }
+    
+    .university-logo .uni-logo {
+        max-width: 120px; 
+    }
+
+    /* 3. MENÚ DE NAVEGACIÓN */
+    .main-nav-lines ul {
+        display: block; 
+        flex-direction: column; 
+        gap: 0; 
+        justify-content: flex-start; 
+        list-style-type: disc !important; 
+        padding-left: 20px; 
+    }
+    
+    .main-nav-lines ul li {
+        margin-bottom: 5px;
+        margin-left: 20px;
+        border-bottom: none !important; 
+    }
+    
+    .main-nav-lines ul li a {
+        padding: 5px 0;
+        color: var(--color-text-dark) !important; 
+    }
+
+    /* 4. BIOGRAFÍA Y CV (Apilado en móvil) */
+    .bio-cv-container {
+        flex-direction: column; 
+    }
+
+    .bio-column,
+    .cv-column {
+        flex-basis: 100%;
+        text-align: left; 
+        border-left: none; 
+        padding-left: 0; 
+    }
+    
+    .cv-column {
+        padding-top: 20px; 
+        border-top: 1px solid #eee; 
+        margin-top: 20px; 
+    }
+
+    /* 5. ÁREAS DE INTERÉS (Una columna en móvil) */
+    .two-column-list ul {
+        column-count: 1; 
+        column-gap: 0;
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+    }
+
+    /* 6. PIE DE PÁGINA (FOOTER) */
+    .footer-content-columns {
+        flex-direction: column; 
+        gap: 10px;
+    }
+
+    .footer-column {
+        width: 100%; 
+        padding: 10px 0;
+        border-bottom: 1px dashed #444; 
+    }
+    
+    .footer-column:last-child {
+        border-bottom: none;
+    }
+    
+    .copyright-content {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .back-to-top {
+        display: none; 
+    }
+}
